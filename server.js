@@ -26,7 +26,7 @@ app.get('/messages', function(req, res){
 })
 
 app.post('/messages', function(req, res){
-	if (messages.length > 10){
+	if (messages.length >= 100){
 		messages.shift(req.body);
 		console.log('Message was deleted');
 	}
